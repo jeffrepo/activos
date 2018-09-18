@@ -1,0 +1,24 @@
+<openerp>
+  <data>
+
+    <record model="ir.ui.view" id="activos_view_account_asset_asset_form">
+        <field name="name">activos.account.asset.asset.form</field>
+        <field name="model">account.asset.asset</field>
+        <field name="inherit_id" ref="account_asset.view_account_asset_asset_form"/>
+        <field name="arch" type="xml">
+            <field name="date" position="after">
+                <field name="ubicacion_id"/>
+                <field name="responsable_id"/>
+                <field name="numero_de_serie"/>
+                <field name="marca"/>
+                <field name="modelo"/>
+            </field>
+            <field name="invoice_id" position="after">
+                <field name="etiqueta"/>
+                <field name="estado"/>
+            </field>
+        </field>
+    </record>
+
+  </data>
+</openerp>
