@@ -5,8 +5,9 @@ from odoo import models, fields, api
 class AccountAssetAsset(models.Model):
     _inherit = 'account.asset.asset'
 
-    ubicacion_id = fields.Many2one('stock.location', string='Ubicacion', track_visibility='onchange')
-    responsable_id = fields.Many2one('hr.employee', string='Responsable', track_visibility='onchange')
+    ubicacion_id = fields.Many2one('stock.location', string='Ubicacion')
+    localidad_id = fields.Many2one('activos.localidad', string='Localidad')
+    responsable_id = fields.Many2one('hr.employee', string='Responsable')
     numero_de_serie = fields.Char('Numero de serie')
     marca = fields.Char('Marca')
     modelo = fields.Char('Modelo')
@@ -16,3 +17,6 @@ class AccountAssetAsset(models.Model):
         ('regular', 'Regular'),
         ('malo', 'Malo'),
     ])
+
+
+

@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_activos_localidad,access_activos_localidad,model_activos_localidad,base.group_user,1,0,0,0
+access_activos_localidad_conta,access_activos_localidad_conta,model_activos_localidad,account.group_account_manager,1,1,1,1

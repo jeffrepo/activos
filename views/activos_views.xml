@@ -1,0 +1,38 @@
+<openerp>
+    <data>
+
+        <record model="ir.ui.view" id="activos_localidad_tree">
+            <field name="name">activos.localidad.tree</field>
+            <field name="model">activos.localidad</field>
+            <field name="arch" type="xml">
+                <tree string="Localidad">
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="activos_localidad_form">
+            <field name="name">activos.localidad.form</field>
+            <field name="model">activos.localidad</field>
+            <field name="arch" type="xml">
+                <form string="Localidad">
+				    <group>
+                        <group>
+                            <field name="name"/>
+                        </group>
+					</group>
+				</form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="activos_action_account_asset_asset_localidad_form">
+            <field name="name">Localidad</field>
+            <field name="res_model">activos.localidad</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="activos_localidad_tree"/>
+        </record>
+
+        <menuitem parent="account.menu_finance_entries_management" id="menu_action_account_asset_asset_localidad_form" action="activos_action_account_asset_asset_localidad_form" sequence="101" groups="account.group_account_user"/>
+
+    </data>
+</openerp>
