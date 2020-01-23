@@ -5,7 +5,7 @@ from odoo import models, fields, api
 class AccountAssetAsset(models.Model):
     _inherit = 'account.asset.asset'
 
-    ubicacion_id = fields.Many2one('stock.location', string='Ubicacion')
+#    ubicacion_id = fields.Many2one('stock.location', string='Ubicacion')
     localidad_id = fields.Many2one('activos.localidad', string='Localidad')
     responsable_id = fields.Many2one('hr.employee', string='Responsable')
     numero_de_serie = fields.Char('Numero de serie')
