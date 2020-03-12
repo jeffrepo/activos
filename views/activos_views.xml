@@ -19,7 +19,6 @@
 				    <group>
                         <group>
                             <field name="name"/>
-                            <field name="etiqueta_ids" widget="many2many_tags"/>
                         </group>
 					</group>
 				</form>
@@ -34,6 +33,39 @@
         </record>
 
         <menuitem parent="account.menu_finance_entries_management" id="menu_action_account_asset_asset_localidad_form" action="activos_action_account_asset_asset_localidad_form" sequence="101" groups="account.group_account_user"/>
+
+        <record model="ir.ui.view" id="activos_area_tree">
+            <field name="name">activos.area.tree</field>
+            <field name="model">activos.area</field>
+            <field name="arch" type="xml">
+                <tree string="Area">
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="activos_area_form">
+            <field name="name">activos.area.form</field>
+            <field name="model">activos.area</field>
+            <field name="arch" type="xml">
+                <form string="Area">
+				    <group>
+                        <group>
+                            <field name="name"/>
+                        </group>
+					</group>
+				</form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="activos_action_account_asset_asset_area_form">
+            <field name="name">Area</field>
+            <field name="res_model">activos.area</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="activos_area_tree"/>
+        </record>
+
+        <menuitem parent="account.menu_finance_entries_management" id="menu_action_account_asset_asset_area_form" action="activos_action_account_asset_asset_area_form" sequence="101" groups="account.group_account_user"/>
 
     </data>
 </openerp>

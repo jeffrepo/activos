@@ -9,6 +9,7 @@
             <field name="date" position="after">
 <!--                <field name="ubicacion_id"/>-->
                 <field name="localidad_id"/>
+                <field name="area_id"/>
                 <field name="responsable_id"/>
                 <field name="numero_de_serie"/>
                 <field name="marca"/>
