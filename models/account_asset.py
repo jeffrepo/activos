@@ -3,7 +3,7 @@
 from odoo import models, fields, api
 
 class AccountAssetAsset(models.Model):
-    _inherit = 'account.asset.asset'
+    _inherit = 'account.asset'
 
 #    ubicacion_id = fields.Many2one('stock.location', string='Ubicacion')
     localidad_id = fields.Many2one('activos.localidad', string='Localidad')
